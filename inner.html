@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p class="text">Drink, drugs, sex</p>
+    </div>
+    <script>
+        const textElement = document.querySelector('.text');
+
+        const textElementContent = textElement.textContent;
+        console.log(textElementContent);
+
+        textElement.textContent = `No, sport is the most powerfull stuff`
+    </script>
+</body>
+</html>

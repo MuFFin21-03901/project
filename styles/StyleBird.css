@@ -1,0 +1,8 @@
+body {
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+}
+#board {
+    /*background-color:skyblue;*/
+    background-image: url("./images/tumblr_pqqqwzCCRx1uhdr2mo1_1280.webp")
+}

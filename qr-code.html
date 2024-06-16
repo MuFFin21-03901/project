@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор QR-коду</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+</head>
+<body>
+    <h1>Генератор QR-коду</h1>
+    <div>
+        <label for="text">Текст або URL:</label>
+        <input type="text" id="text">
+        <button onclick="generateQR()">Створити QR-код</button>
+    </div>
+    <br>
+    <canvas id="qrcode"></canvas>
+
+    <script>
+        function generateQR() {
+            const qrText = document.getElementById('text').value.trim();
+            if (!qrText) {
+                alert('Будь ласка, введіть текст або URL для створення QR-коду.');
+                return;
+            }
+
+            const canvas = document.getElementById('qrcode');
+            const qrOptions = {
+                text: qrText,
+                width: 200,
+                height: 200,
+                colorDark: '#000000',
+                colorLight: '#ffffff',
+                correctLevel: QRCode.CorrectLevel.HIGH, // Використовуємо HIGH замість H
+            };
+
+            new QRCode(canvas, qrOptions);
+        }
+    </script>
+</body>
+</html>

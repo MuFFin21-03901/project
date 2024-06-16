@@ -1,0 +1,79 @@
+body {
+    background-color: rgb(77, 77, 77);
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+#input-id {
+    font-size: 20px;
+    padding: 10px;
+    width: 200px;
+    margin-right: 10px;
+    border-color: rgb(0, 0, 0);
+}
+.js-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgb(43, 125, 233);
+    border-color: rgb(0, 36, 128);
+    color: whitesmoke;
+}
+.text {
+    font-size: 19px;
+}
+#imgBox {
+    margin-top: 20px;
+}
+
+#qrImg {
+    max-width: 300px;
+}
+.container {
+    width: 80%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff; /* Білий колір фону контейнера */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тінь для контейнера */
+    animation: faseIn;
+}
+.input-box button:hover {
+    background-color: #0056b3;
+}
+#imgBox {
+    text-align: center;
+    margin-top: 20px;
+    opacity: 0; /* Початково приховане */
+    transition: opacity 0.9s ease; /* Плавний перехід прозорості */
+}
+
+#imgBox.show {
+    opacity: 1; /* Показуємо контейнер */
+}
+
+#qrImg {
+    max-width: 300px;
+    animation: zoomIn 0.9s ease-out; /* Анімація збільшення зображення */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}

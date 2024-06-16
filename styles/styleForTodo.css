@@ -1,0 +1,156 @@
+body {
+    background: linear-gradient(to right, #8a3ab9, #42a5f5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+#block {
+    position:fixed;
+    top: 40%; /* Зміщення елемента на половину висоти вікна */
+    left: 50%; /* Зміщення елемента на половину ширини вікна */
+}
+
+#list {
+    font-size: 35px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    position: fixed; /* Фіксоване позиціонування */
+    top: 5%; /* Зміщення елемента на половину висоти вікна */
+    left: 50%; /* Зміщення елемента на половину ширини вікна */
+    transform: translate(-50%, -50%); /* Вирівнюємо центр елемента */
+    position: fixed;
+    
+}
+
+.js-grid {
+    position: fixed;
+    bottom: 70%; /* Розташуємо блок з введенням та кнопкою "Додати" внизу сторінки */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center; /* Вирівнюємо елементи по центру по горизонталі */
+    align-items: center; /* Вирівнюємо елементи по центру по вертикалі */
+    flex-wrap: wrap; /* Дозволяємо елементам переноситися на новий ряд, якщо потрібно */
+}
+
+
+
+.js-date-input {
+    width: 100px;
+    height: 37px;
+    cursor: pointer;
+    margin: 3px;
+}
+
+.js-input {
+    width: 160px;
+    height: 35px; 
+    margin-bottom: 10px;
+    margin: 3px;
+}
+
+#change {
+    font-size: 5px;
+    font-family: Arial;
+ 
+}
+#add-id{
+    width: 40px;
+    height: 40px;
+    background-color:lawngreen;
+    border: none;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    color:black;
+    cursor: pointer;
+    font-size: 17px;
+    margin: 3px;
+}
+
+
+.js-todo-list {
+    max-height: 200px; /* Максимальна висота обгортки */
+
+}
+.todo-item {
+    display: flex; /* Відображення елементів в один ряд */
+    align-items: center; /* Вирівнювання елементів по вертикалі по центру */
+    margin-bottom: 10px; /* Відступ вниз між кожним елементом */
+}
+
+.name, .date {
+    margin: 0; /* Зняти маржі з ім'ям і датою */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color:white;
+    margin-right: 20px;
+}
+
+#delete-btn {
+    margin-left: 10px; /* Відступ зліва від кнопки видалення */
+    background-color: rgb(230, 71, 50);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    color:white;
+    font-size: 18px;
+    cursor: pointer;
+}
+#mainNumber {
+    position: fixed;
+    top: 80%; 
+    left: 80%; 
+    font-size: 25px;
+    font-family: arial;
+    font-weight: bold;
+}
+
+#star {
+    margin-left: 10px; /* Відступ зліва від кнопки видалення */
+    border: 2px solid rgb(183, 15, 183); /* Фіолетова рамка */
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none; /* Відмінити стандартний контур кнопки */
+}
+
+#star:hover {
+    background-color: rgb(183, 15, 183); /* Змінюємо фон при наведенні курсору */
+}
+
+/* Додайте клас анімації */
+@keyframes textAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Застосуйте анімацію до елементу тексту */
+  .name,
+  .date,
+  #delete-btn,
+  #star
+   {
+    animation: textAnimation 0.5s ease-in-out forwards;
+  }
+
+  .todo-item {
+    border: 2px solid #db51eb; /* Товста рамка */
+    border-radius: 10px; /* Закруглені кути */
+    padding: 20px; /* Внутрішній відступ */
+    width: 350px; /* Ширина контейнера */
+    background-color: rgba(255, 255, 255, 0.2); /* Прозорий фон */
+    backdrop-filter: blur(10px); 
+  }

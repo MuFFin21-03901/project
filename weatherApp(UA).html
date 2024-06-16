@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погодний додаток</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <p id="weather">Прогноз погоди</p>
+            <div class="input-container">
+                <input type="text" placeholder="Введіть місто" id="city">
+                <button id="btn-id" onclick="getWeather()">🔍</button>
+            </div>
+            <div class="onlyWthr">
+                <h1 class="yourCity" id="cityName"></h1>
+                <h2 class="temperature" id="temperature"></h2>
+                <h3 class="humidity" id="humidity"></h3>
+                <p class="cloud" id="cloud"></p>
+                <p class="wthEmoji" id="emoji"></p>
+                <p class="nextCity" id="nextCity">Будь ласка, введіть ваше місто</p>
+            </div>
+        </div>
+    </div>
+    <script src="WeatherApp(ua).js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Два розділи з вкладками</title>
+  <style>
+    /* Сховати всі вкладки за замовчуванням, крім першої */
+    .tabcontent {
+      display: none;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+
+    /* Стилізуємо кнопки вкладок */
+    .tab button {
+      background-color: #f0f0f0;
+      float: left;
+      border: 1px solid #ccc;
+      outline: none;
+      cursor: pointer;
+      padding: 10px 15px;
+      transition: 0.3s;
+    }
+
+    .tab button:hover {
+      background-color: #ddd;
+    }
+
+    /* Активна кнопка вкладки */
+    .tab button.active {
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'Section1')">Розділ 1</button>
+  <button class="tablinks" onclick="openTab(event, 'Section2')">Розділ 2</button>
+</div>
+
+<div id="Section1" class="tabcontent">
+  <h3>Розділ 1</h3>
+  <p>Це вміст першого розділу.</p>
+</div>
+
+<div id="Section2" class="tabcontent">
+  <h3>Розділ 2</h3>
+  <p>Це вміст другого розділу.</p>
+</div>
+
+<script>
+  function openTab(event, tabName) {
+    // Знайдіть всі елементи з класом "tabcontent" та сховайте їх
+    let tabcontent = document.getElementsByClassName("tabcontent");
+    for (let i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    
+    // Знайдіть всі кнопки з класом "tablinks" та видаліть клас "active"
+    let tablinks = document.getElementsByClassName("tablinks");
+    for (let i = 0; i < tablinks.length; i++) {
+      tablinks[i].classList.remove("active");
+    }
+    
+    // Показати вміст поточної вкладки та позначити вибрану кнопку як активну
+    document.getElementById(tabName).style.display = "block";
+    event.currentTarget.classList.add("active");
+  }
+
+  // За замовчуванням показати першу вкладку
+  document.getElementById("Section1").style.display = "block";
+  document.getElementsByClassName("tablinks")[0].classList.add("active");
+</script>
+
+</body>
+</html>

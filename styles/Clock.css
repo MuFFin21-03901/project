@@ -1,0 +1,139 @@
+body {
+    overflow: hidden;
+    background: #1f1938;
+    margin: 0;
+}
+body::before{
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background-color: #00d0ff;
+    left: 15%;
+    top: 20%;
+    filter: blur(150px);
+}
+body::after{
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: #bb00ff;
+    left: 80%;
+    top: 74%;
+    filter: blur(150px);
+}
+#clock-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: -70px;
+    overflow: hidden; /* Щоб уникнути з'явлення полоси прокрутки */
+}
+
+#clock {
+    font-family: monospace;
+    font-size: 6.5rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    width: 60%;
+    background-color: hsla(0, 0%, 100%, 0.1);
+    border-radius: 40px;
+}
+
+.tabcontent {
+    padding: 20px;
+}
+
+.tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab button {
+    margin: 10px;
+    width: 17%;
+    color: white;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    background-color: #ff9900;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+#tabSection1 {
+    background-color: black;
+}
+
+.tab button:hover {
+    background-color: #e28708;
+}
+
+.tab button.active {
+    background-color: #ccc;
+}
+#display-center {
+    align-items: center;
+    color:rgb(255, 255, 255);
+}
+#stop-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: column;
+    border-radius: 50px;
+    padding: 30px; ;
+}
+#myh1 {
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+    font-family: monospace;
+    color: white;
+}
+#display {
+    font-size: 5rem;
+    font-family: monospace;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+#controls button {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 15px 10px;
+    min-width: 125px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+}
+#startBtn {
+    background-color: #11bc25;
+}
+#startBtn:hover{
+    background-color:#097c03;
+}
+#stopBtn {
+    background-color: #b10606;
+}
+#stopBtn:hover{
+    background-color:#5e0404;
+}
+#resetBtn {
+    background-color: #000000;
+}
+#resettBtn:hover{
+    background-color:#090909;
+}
